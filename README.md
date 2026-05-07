@@ -117,6 +117,3 @@ LeetCode: https://leetcode.com/u/Revati0607/
 
 ## Author
 Computer Science Student | Web Developer | Problem Solver | Tech Enthusiast
-**Revati Kadam**
-
-Computer Science Student | Web Developer | Problem Solver | Tech Enthusiast
