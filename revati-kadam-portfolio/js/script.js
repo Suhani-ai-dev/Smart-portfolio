@@ -130,24 +130,6 @@ fetch("data/projects.json")
 .catch(err => {
   document.getElementById("projects-container").innerHTML = "Error loading projects";
 });
-// EMAILJS INIT (IMPORTANT)
-(function(){
-  emailjs.init("YOUR_PUBLIC_KEY"); // replace
-})();
-
-// CONTACT FORM SEND
-document.getElementById("contact-form").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
-    .then(function(){
-      alert("Message sent successfully!");
-      this.reset();
-     }).catch((error) => {
-    console.log("Error:", error);
-    alert("Failed to send message.");
-  });
-});
 
 // Initialize EmailJS
 (function(){
