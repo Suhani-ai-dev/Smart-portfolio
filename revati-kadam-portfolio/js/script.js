@@ -2,7 +2,6 @@ function showSection(id) {
   document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 }
 
-// Typing animation
 const roles = ["Web Developer", "Programmer", "Problem Solver", "Website Designer", "Tech Enthusiast"];
 let i = 0, j = 0, del = false;
 
@@ -22,25 +21,24 @@ function type() {
 }
 type();
 
-// Theme
+(function() {
+  const saved = localStorage.getItem("theme");
+  if (saved === "light") document.body.classList.add("light-theme");
+})();
+
 function setTheme(mode) {
   if (mode === "light") {
-    document.documentElement.style.setProperty('--bg', '#f8fafc');
-    document.documentElement.style.setProperty('--text', '#0f172a');
-    document.documentElement.style.setProperty('--card', '#e2e8f0');
+    document.body.classList.add("light-theme");
   } else {
-    document.documentElement.style.setProperty('--bg', '#0f172a');
-    document.documentElement.style.setProperty('--text', '#e2e8f0');
-    document.documentElement.style.setProperty('--card', '#1e293b');
+    document.body.classList.remove("light-theme");
   }
+  localStorage.setItem("theme", mode);
 }
 
-// Accent color
 function setColor(color) {
   document.documentElement.style.setProperty('--primary', color);
 }
 
-// Settings menu
 function toggleSettings() {
   document.getElementById("settingsMenu").classList.toggle("show");
 }
@@ -52,7 +50,6 @@ document.addEventListener("click", function (e) {
   }
 });
 
-// Spark on mousemove
 document.addEventListener("mousemove", e => {
   const s = document.createElement("div");
   s.className = "spark";
@@ -69,8 +66,6 @@ function toggleNavbar() {
     links.classList.toggle("show");
   }
 }
-
-// ── SKILL ICONS ──
 const skillIcons = {
   "React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   "Node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
@@ -89,7 +84,6 @@ const skillIcons = {
   "Computer Networks": "https://img.icons8.com/ios-filled/50/network.png"
 };
 
-// ── LOAD SKILLS ──
 fetch("data/skills.json")
   .then(res => res.json())
   .then(data => {
@@ -109,7 +103,6 @@ fetch("data/skills.json")
     document.getElementById("skills-container").innerHTML = "<p>Could not load skills.</p>";
   });
 
-// ── LOAD PROJECTS ──
 fetch("data/projects.json")
   .then(res => res.json())
   .then(data => {

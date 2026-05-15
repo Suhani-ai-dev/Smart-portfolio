@@ -286,7 +286,7 @@ body {
   width: 220px; height: 220px;
   border-radius: 50%;
   background: linear-gradient(135deg, #1e3a5f, #2563eb);
-  border: 3px solid rgba(74,158,255,0.3);
+  border: 4px solid rgba(59,130,246,0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -294,7 +294,16 @@ body {
   font-weight: 700;
   color: #fff;
   letter-spacing: 2px;
-  box-shadow: 0 0 60px rgba(59,130,246,0.2);
+  box-shadow: 0 0 60px rgba(59,130,246,0.25), 0 0 0 8px rgba(59,130,246,0.08);
+  overflow: hidden;
+}
+
+.hero-img-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
 }
 
 /* ── ABOUT ── */
@@ -632,14 +641,25 @@ form button:disabled {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.3s;
+  /* NO transform transition here — prevents menu tilt */
+  transition: background 0.3s, border-color 0.3s;
   z-index: 2000;
   border: 1px solid var(--border);
 }
 
 .settings:hover {
-  transform: scale(1.1) rotate(30deg);
   background: var(--primary);
+}
+
+/* Only the icon spins, not the whole button */
+.settings-icon {
+  display: inline-block;
+  transition: transform 0.4s ease;
+  pointer-events: none;
+}
+
+.settings:hover .settings-icon {
+  transform: rotate(60deg);
 }
 
 .menu {
@@ -775,4 +795,113 @@ form button:disabled {
 @media (min-width: 769px) {
   .hamburger { display: none; }
   .nav-links  { display: flex !important; }
+}
+/* ══════════════════════════════════════════
+   LIGHT THEME OVERRIDES
+   Applied via body.light-theme class
+   ══════════════════════════════════════════ */
+body.light-theme {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --card: #e2e8f0;
+  --section-alt: #f1f5f9;
+  --border: rgba(0,0,0,0.1);
+  --shadow: rgba(0,0,0,0.12);
+  --text-muted-1: rgba(15,23,42,0.75);
+  --text-muted-2: rgba(15,23,42,0.65);
+  --text-muted-3: rgba(15,23,42,0.6);
+  --text-muted-4: rgba(15,23,42,0.5);
+}
+
+/* Navbar stays light-background-aware */
+body.light-theme .navbar {
+  background: rgba(248,250,252,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Nav links: dark text on light bg, white on hover/active */
+body.light-theme .nav-links li {
+  color: #0f172a;
+}
+body.light-theme .nav-links li:hover,
+body.light-theme .nav-links li.nav-active {
+  background: var(--primary);
+  color: #fff;
+}
+body.light-theme .hamburger {
+  color: #0f172a;
+}
+
+/* Mobile dropdown bg */
+body.light-theme .nav-links {
+  background: #f1f5f9;
+  border-color: rgba(0,0,0,0.1);
+}
+
+/* Section headings (About, Projects, etc.) stay dark, not pure black */
+body.light-theme .section h2 {
+  color: #1e293b;
+}
+
+/* Hero text */
+body.light-theme .hero-text h1,
+body.light-theme .hero-text h2 {
+  color: #0f172a;
+}
+
+/* Stat cards */
+body.light-theme .stat-card {
+  background: #e2e8f0;
+  border-color: rgba(0,0,0,0.1);
+}
+body.light-theme .stat-lbl {
+  color: rgba(15,23,42,0.55);
+}
+
+/* Skill cards */
+body.light-theme .skill-card {
+  background: #e2e8f0;
+  border-color: rgba(0,0,0,0.1);
+}
+body.light-theme .skill-card p {
+  color: #0f172a;
+}
+
+/* Project cards */
+body.light-theme .project-card {
+  background: #e2e8f0;
+  border-color: rgba(0,0,0,0.1);
+}
+body.light-theme .project-info h3 { color: #0f172a; }
+body.light-theme .project-info p  { color: rgba(15,23,42,0.6); }
+body.light-theme .project-links a:last-child {
+  color: #0f172a;
+  border-color: rgba(0,0,0,0.2);
+}
+
+/* Form inputs */
+body.light-theme form input,
+body.light-theme form textarea {
+  background: #e2e8f0;
+  color: #0f172a;
+  border-color: rgba(0,0,0,0.15);
+}
+body.light-theme form input::placeholder,
+body.light-theme form textarea::placeholder {
+  color: rgba(15,23,42,0.4);
+}
+
+/* Settings menu */
+body.light-theme .settings {
+  background: #e2e8f0;
+  border-color: rgba(0,0,0,0.12);
+}
+body.light-theme .menu {
+  background: #f1f5f9;
+  border-color: rgba(0,0,0,0.1);
+}
+body.light-theme .menu button {
+  background: #e2e8f0;
+  color: #0f172a;
+  border-color: rgba(0,0,0,0.15);
 }
