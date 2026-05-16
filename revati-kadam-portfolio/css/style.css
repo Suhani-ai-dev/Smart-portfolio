@@ -467,9 +467,11 @@ body {
   display: grid;
 
   grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
+    repeat(auto-fill,minmax(240px,1fr));
 
-  gap: 22px;
+  gap: 24px;
+
+  align-items: stretch;
 }
 
 /* Skill Cards */
@@ -488,9 +490,9 @@ body {
 
   border-radius: 22px;
 
-  padding: 24px;
+  padding: 28px 20px;
 
-  min-height: 150px;
+  min-height: 220px;
 
   display: flex;
 
@@ -503,6 +505,14 @@ body {
   backdrop-filter: blur(14px);
 
   transition: all 0.35s ease;
+}
+.skill-card img {
+
+  width: 52px;
+
+  height: 52px;
+
+  object-fit: contain;
 }
 
 .skill-card:hover {
@@ -521,41 +531,67 @@ body {
 
 .featured {
 
-  grid-column: span 2;
-
   background:
     linear-gradient(
       135deg,
       rgba(124,58,237,0.18),
       rgba(37,99,235,0.18)
     );
+
+  border:
+    1px solid rgba(124,58,237,0.35);
 }
 
 /* Card Content */
+.skill-card-content {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  width: 100%;
+
+  height: 100%;
+}
 
 .skill-card-content h3 {
 
-  font-size: 1.2rem;
-
-  margin-bottom: 14px;
+  font-size: 1.05rem;
 
   font-weight: 600;
+
+  line-height: 1.4;
+
+  margin: 0;
 }
+
 
 .skill-level {
 
-  display: inline-block;
+  display: inline-flex;
 
-  padding: 6px 14px;
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 7px 16px;
 
   border-radius: 999px;
 
   background:
     rgba(255,255,255,0.08);
 
-  font-size: 0.85rem;
+  font-size: 0.82rem;
 
   color: #d1d5db;
+
+  white-space: nowrap;
 }
 
 /* Mobile */
