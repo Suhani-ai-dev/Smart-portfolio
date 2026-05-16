@@ -1,17 +1,72 @@
-[
-  "React",
-  "Node.js",
-  "MongoDB",
-  "JavaScript",
-  "HTML",
-  "CSS",
-  "Java",
-  "Express.js",
-  "Bootstrap",
-  "Tailwind CSS",
-  "SQL",
-  "Object-Oriented Programming",
-  "Operating Systems",
-  "Database Management Systems",
-  "Computer Networks"
-]
+{
+  "frontend": [
+    {
+      "name": "React",
+      "level": "Advanced",
+      "featured": true
+    },
+    {
+      "name": "JavaScript",
+      "level": "Advanced",
+      "featured": true
+    },
+    {
+      "name": "HTML",
+      "level": "Advanced"
+    },
+    {
+      "name": "CSS",
+      "level": "Advanced"
+    },
+    {
+      "name": "Tailwind CSS",
+      "level": "Intermediate"
+    },
+    {
+      "name": "Bootstrap",
+      "level": "Intermediate"
+    }
+  ],
+
+  "backend": [
+    {
+      "name": "Node.js",
+      "level": "Intermediate",
+      "featured": true
+    },
+    {
+      "name": "Express.js",
+      "level": "Intermediate"
+    },
+    {
+      "name": "MongoDB",
+      "level": "Intermediate"
+    },
+    {
+      "name": "SQL",
+      "level": "Intermediate"
+    }
+  ],
+
+  "programming": [
+    {
+      "name": "Java",
+      "level": "Advanced"
+    }
+  ],
+
+  "coreSubjects": [
+    {
+      "name": "Object-Oriented Programming"
+    },
+    {
+      "name": "Operating Systems"
+    },
+    {
+      "name": "Database Management Systems"
+    },
+    {
+      "name": "Computer Networks"
+    }
+  ]
+}
