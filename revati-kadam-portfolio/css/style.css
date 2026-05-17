@@ -524,11 +524,11 @@ body {
   border:
     1px solid rgba(255,255,255,0.08);
 
-  border-radius: 22px;
+  border-radius: 18px;
 
-  padding: 28px 20px;
+  padding: 22px 16px;
 
-  min-height: 220px;
+  min-height: 180px;
 
   display: flex;
 
@@ -557,9 +557,9 @@ body {
 
 .skill-card img {
 
-  width: 52px;
+  width: 42px;
 
-  height: 52px;
+  height: 42px;
 
   object-fit: contain;
 }
@@ -574,7 +574,7 @@ body {
 
   justify-content: center;
 
-  gap: 14px;
+  gap: 10px;
 
   width: 100%;
 
@@ -583,7 +583,7 @@ body {
 
 .skill-card-content h3 {
 
-  font-size: 1.05rem;
+  font-size: 0.98rem;
 
   font-weight: 600;
 
@@ -600,14 +600,14 @@ body {
 
   justify-content: center;
 
-  padding: 7px 16px;
+  padding: 6px 14px;
 
   border-radius: 999px;
 
   background:
     rgba(255,255,255,0.08);
 
-  font-size: 0.82rem;
+  font-size: 0.76rem;
 
   color: #d1d5db;
 
@@ -695,7 +695,12 @@ body {
 
   .skills-grid {
 
-  grid-template-columns: 1fr;
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(190px, 1fr));
+
+  gap: 18px;
 }
 .skills-tabs {
 
