@@ -1,14 +1,8 @@
 {
-  "frontend": [
+  "Frontend": [
     {
       "name": "React",
-      "level": "Advanced",
-      "featured": true
-    },
-    {
-      "name": "JavaScript",
-      "level": "Advanced",
-      "featured": true
+      "level": "Advanced"
     },
     {
       "name": "HTML",
@@ -17,6 +11,10 @@
     {
       "name": "CSS",
       "level": "Advanced"
+    },
+    {
+      "name": "JavaScript",
+      "level": "Intermediate"
     },
     {
       "name": "Tailwind CSS",
@@ -28,11 +26,10 @@
     }
   ],
 
-  "backend": [
+  "Backend": [
     {
       "name": "Node.js",
-      "level": "Intermediate",
-      "featured": true
+      "level": "Intermediate"
     },
     {
       "name": "Express.js",
@@ -48,25 +45,63 @@
     }
   ],
 
-  "programming": [
+  "Programming Languages": [
     {
       "name": "Java",
+      "level": "Advanced"
+    },
+    {
+      "name": "JavaScript",
+      "level": "Intermediate"
+    }
+  ],
+
+  "Core Computer Science": [
+    {
+      "name": "Operating Systems",
+      "level": "Intermediate"
+    },
+    {
+      "name": "Database Management Systems",
+      "level": "Intermediate"
+    },
+    {
+      "name": "Computer Networks",
+      "level": "Intermediate"
+    },
+    {
+      "name": "Object-Oriented Programming",
       "level": "Advanced"
     }
   ],
 
-  "coreSubjects": [
+  "Tools & Platforms": [
     {
-      "name": "Object-Oriented Programming"
+      "name": "Git",
+      "level": "Intermediate"
     },
     {
-      "name": "Operating Systems"
+      "name": "GitHub",
+      "level": "Intermediate"
     },
     {
-      "name": "Database Management Systems"
+      "name": "VS Code",
+      "level": "Advanced"
     },
     {
-      "name": "Computer Networks"
+      "name": "Netlify",
+      "level": "Intermediate"
+    }
+  ],
+
+  "Currently Learning": [
+    {
+      "name": "Docker",
+      "level": "Beginner"
+    },
+    {
+      "name": "AWS",
+      "level": "Beginner"
     }
   ]
 }
